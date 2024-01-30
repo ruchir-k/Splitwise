@@ -5,8 +5,9 @@ import exceptions.BadCommandFormatException
 object CommandFactory: Command {
     val commandMap = mutableMapOf<String,Command>().apply {
         put("add_user", AddUserCommand())
+        put("add_user_to_group", AddUserToGroupCommand())
+        put("create_group", CreateGroupCommand())
         put("add_expense", AddExpenseCommand())
-        put("add_split", AddSplitCommand())
         put("show", ShowCommand())
         put("settle", SettleCommand())
     }

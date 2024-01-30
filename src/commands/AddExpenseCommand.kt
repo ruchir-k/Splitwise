@@ -3,7 +3,9 @@ package commands
 import BookKeeper
 import Utils
 import exceptions.InvalidExpenseTypeException
+import exceptions.NoSuchGroupException
 import exceptions.NoSuchUserException
+import models.Group
 import models.User
 import models.expenses.Expense
 import models.expenses.ExpenseFactory
@@ -25,9 +27,21 @@ class AddExpenseCommand: Command {
 
         val name: String = cmd[2]
         val totalAmount: Double = cmd[3]. toDouble()
+
+        val group: Group
+        try {
+            group = Utils.getGroup(cmd[4])
+        } catch (e: NoSuchGroupException) {
+            println(e.message)
+            return
+        }
+
         val createdBy: User
         try {
-            createdBy = Utils.getUser(cmd[4])
+            createdBy = Utils.getUser(cmd[5])
+            if(!Utils.isUserPresentInGroup(createdBy, group)) {
+                throw NoSuchUserException("user not present in the group id: ${group.uid}, group name: ${group.name}")
+            }
         } catch (e: NoSuchUserException) {
             println(e.message)
             return
@@ -43,7 +57,10 @@ class AddExpenseCommand: Command {
 
         val paidBy: User
         try {
-            paidBy = Utils.getUser(cmd[5])
+            paidBy = Utils.getUser(cmd[6])
+            if(!Utils.isUserPresentInGroup(createdBy, group)) {
+                throw NoSuchUserException("user not present in the group id: ${group.uid}, group name: ${group.name}")
+            }
         } catch (e: NoSuchUserException) {
             println(e.message)
             return
@@ -51,18 +68,16 @@ class AddExpenseCommand: Command {
 
         expense.paidBy = paidBy
 
-        val numOfSplits: Int = cmd.size - 6
         val splits = mutableListOf<Split>()
 
         if(exptype == ExpenseType.EQUAL) {
-            for(i in 0 until numOfSplits) {
-                val user =  Utils.getUser(cmd[6+i])
+            group.users.forEach { user: User ->
                 val split = SplitFactory.createSplit(exptype, user, 0.0)
                 splits.add(split)
             }
         }
 
         expense.splits = splits
-        bk.addExpense(name,exptype,createdBy,paidBy, splits, totalAmount)
+        bk.addExpense(name,exptype, group, createdBy,paidBy, splits, totalAmount)
     }
 }

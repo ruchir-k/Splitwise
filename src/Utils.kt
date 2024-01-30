@@ -1,3 +1,4 @@
+import models.Group
 import models.User
 import kotlin.math.abs
 import kotlin.math.min
@@ -19,6 +20,23 @@ class Utils {
                 user = bk.users[uid.toLong()]!!
             }
             return user
+        }
+
+        fun getGroup(uid: String): Group {
+            val bk = BookKeeper
+            lateinit var group: Group
+            if(bk.groups[uid.toLong()] != null) {
+                group = bk.groups[uid.toLong()]!!
+            }
+            return group
+        }
+
+        fun isUserPresentInGroup(user: User, group: Group): Boolean {
+            val bk = BookKeeper
+            if (bk.groups[group.uid]?.users?.contains(user) != null) {
+                return true
+            }
+            return false
         }
     }
 

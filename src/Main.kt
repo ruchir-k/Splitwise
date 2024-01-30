@@ -1,11 +1,6 @@
 import commands.CommandFactory
-import exceptions.BadCommandFormatException
+import models.Group
 import models.User
-import models.expenses.EqualExpense
-import models.expenses.ExpenseType
-import models.splits.EqualSplit
-import models.splits.Split
-import java.util.Scanner
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -16,13 +11,20 @@ fun main() {
     bk.addUser(User("shriyan", "shriyan@gmail.com", "shriyan"))
     bk.addUser(User("areana", "areana@gamil.com", "areana"))
 
-    CommandFactory.execute("add_expense equal shopping 1000 0 1 1 0 2".split(" "))
-    CommandFactory.execute("add_expense equal shopping 4000 0 2 1 0 2".split(" "))
-
+    CommandFactory.execute("create_group group1 0 1 2".split(" "))
     bk.showAllBalances()
 
-    CommandFactory.execute("settle 0 1".split(" "))
     println("******")
+    CommandFactory.execute("add_expense equal shopping 1000 0 0 0".split(" "))
+    bk.showAllBalances()
+
+
+    println("******")
+    CommandFactory.execute("settle 0 1 0".split(" "))
+    bk.showAllBalances()
+
+    println("******")
+    CommandFactory.execute("create_group group1 1 2".split(" "))
     bk.showAllBalances()
 
 //    val sc = Scanner(System.`in`)

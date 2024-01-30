@@ -1,4 +1,5 @@
 import exceptions.NoSuchUserException
+import models.Group
 import models.expenses.Expense
 import models.User
 import models.expenses.ExpenseFactory
@@ -8,27 +9,40 @@ import models.splits.Split
 object BookKeeper {
     var expenses = mutableMapOf<Long, Expense>()
     var users = mutableMapOf<Long, User>()
+    val groups = mutableMapOf<Long, Group>()
     var userByEmail = mutableMapOf<String, User>()
-    var balances = mutableMapOf<User, MutableMap<User, Double>>()
+//    var balances = mutableMapOf<User, MutableMap<User, Double>>()
+    var balances = mutableMapOf<Group, MutableMap<User, MutableMap<User, Double>>>()
 
     fun addUser(user: User) {
         users.put(user.uid, user)
         if(user.email != "") {
             userByEmail.put(user.email, user)
         }
-        balances.put(user, mutableMapOf())
+//        balances.put(user, mutableMapOf())
     }
 
-    fun addExpense(name: String, type:ExpenseType, createdBy: User, paidBy: User,
+    fun createGroup(group: Group) {
+        groups.put(group.uid, group)
+        balances.put(group, mutableMapOf())
+        group.users.forEach { user: User ->
+            balances[group]?.put(user, mutableMapOf())
+        }
+    }
+
+    fun addUserToGroup(user: User, group: Group) {
+        balances[group]?.put(user, mutableMapOf())
+    }
+
+    fun addExpense(name: String, type:ExpenseType, group: Group, createdBy: User, paidBy: User,
                    splits: MutableList<Split>, totalAmount: Double) {
         val e: Expense = ExpenseFactory.createExpense(type, name, createdBy, totalAmount)
         expenses.put(e.uid, e)
         createdBy.expenses?.add(e)
         e.splits = splits
         e.recalculate()
-//        println(e)
 
-        if(!balances.containsKey(paidBy)) {
+        if(!balances[group]?.containsKey(paidBy)!!) {
             throw NoSuchUserException("Please add the user before adding their expenses")
         }
 
@@ -38,23 +52,23 @@ object BookKeeper {
             if(paidBy.equals(paidTo)) {
                 continue
             }
-            userBalances = balances.get(paidTo)!!
+            userBalances = balances[group]?.get(paidTo)!!
             userBalances.put(paidBy, s.amount + userBalances.getOrDefault(paidTo,0.0))
-            balances.put(paidTo, userBalances)
+            balances[group]?.put(paidTo, userBalances)
         }
 
     }
 
-    fun settleBalance(ower: User, owedTo: User) {
-        if(!balances.containsKey(ower) || !balances[ower]?.containsKey(owedTo)!!) {
+    fun settleBalance(group: Group, ower: User, owedTo: User) {
+        if(!balances[group]?.containsKey(ower)!! || !balances[group]?.get(ower)?.containsKey(owedTo)!!) {
             println("No expense to settle")
             return
         }
-        balances[ower]?.remove(owedTo)
+        balances[group]?.get(ower)?.remove(owedTo)
     }
 
-    fun showBalance(user: User) {
-        var userBalances = balances.get(user)
+    fun showBalance(group: Group, user: User) {
+        var userBalances = balances[group]?.get(user)
         var hadBalance: Boolean = false
 
         for (user1 in userBalances!!.keys) {
@@ -74,9 +88,16 @@ object BookKeeper {
         }
     }
 
+    fun showAllBalancesGroup(group: Group) {
+        for(user1 in balances[group]?.keys!!) {
+            showBalance(group, user1)
+        }
+    }
+
     fun showAllBalances() {
-        for(user1 in balances.keys) {
-            showBalance(user1)
+        for (group1 in groups.values) {
+            println("Group name: ${group1.name} (Group id: ${group1.uid}) balances:")
+            showAllBalancesGroup(group1)
         }
     }
 }
