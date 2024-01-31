@@ -1,21 +1,22 @@
-package commands
+package domain.usecases.external
 
-import BookKeeper
-import Utils
+import data.BookKeeper
+import utils.Utils
 import exceptions.InvalidExpenseTypeException
 import exceptions.NoSuchGroupException
 import exceptions.NoSuchUserException
-import models.Group
-import models.User
-import models.expenses.Expense
-import models.expenses.ExpenseFactory
-import models.expenses.ExpenseType
-import models.splits.Split
-import models.splits.SplitFactory
+import domain.entities.Group
+import domain.entities.User
+import domain.repo.Command
+import domain.entities.Expense
+import adapter.ExpenseFactory
+import domain.entities.ExpenseType
+import domain.entities.Split
+import adapter.SplitFactory
 import java.util.*
 
 class AddExpenseCommand: Command {
-    override fun execute(cmd: List<String>) {
+    override fun invoke(cmd: List<String>) {
         val bk = BookKeeper
         val exptype: ExpenseType
         try {
@@ -47,7 +48,7 @@ class AddExpenseCommand: Command {
             return
         }
 
-        val expense:Expense
+        val expense: Expense
         try {
             expense = ExpenseFactory.createExpense(exptype, name, createdBy, totalAmount)
         } catch (e: InvalidExpenseTypeException) {

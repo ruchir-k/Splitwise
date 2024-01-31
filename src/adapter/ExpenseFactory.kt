@@ -1,6 +1,9 @@
-package models.expenses
+package adapter
 
-import models.User
+import domain.entities.Expense
+import domain.entities.ExpenseType
+import domain.entities.User
+import domain.usecases.internal.EqualExpense
 
 class ExpenseFactory (){
     companion object {

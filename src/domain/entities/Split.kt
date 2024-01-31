@@ -1,7 +1,4 @@
-package models.splits
-
-import models.User
-import models.expenses.ExpenseType
+package domain.entities
 
 abstract class Split (val user: User, val type: ExpenseType?) {
     var amount: Double = 0.0

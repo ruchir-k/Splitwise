@@ -1,8 +1,6 @@
-package models.expenses
+package domain.entities
 
-import Utils
-import models.User
-import models.splits.Split
+import utils.Utils
 
 abstract class Expense (val name: String, var totalAmount: Double,
                         val createdBy: User, val  type: ExpenseType?) {

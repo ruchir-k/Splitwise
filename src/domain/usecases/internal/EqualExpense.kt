@@ -1,10 +1,10 @@
-package models.expenses
+package domain.usecases.internal
 
-import Utils
+import domain.entities.Expense
+import domain.entities.ExpenseType
+import utils.Utils
 import exceptions.IllegalSplitException
-import models.User
-import models.splits.EqualSplit
-import models.splits.Split
+import domain.entities.User
 
 class EqualExpense(name: String, totalAmount: Double, createdBy: User
 ): Expense(name, totalAmount, createdBy, ExpenseType.EQUAL) {
@@ -29,20 +29,3 @@ class EqualExpense(name: String, totalAmount: Double, createdBy: User
     }
 
 }
-
-//fun main() {
-//
-//    val u1: User = User("ruchir", "email", "abc")
-//    val u2: User = User("ruchir2", "email2", "abc")
-//    val expense1: EqualExpense = EqualExpense("shopping",1000.0, u1)
-//    println(expense1.totalAmount)
-//    val split1: Split = EqualSplit(u1)
-//    val split2: Split = EqualSplit(u2)
-//    val splits = mutableListOf<Split>()
-//    splits += split1
-//    splits += split2
-//    expense1.splits = splits
-//
-//    expense1.recalculate()
-//    println(expense1.splits.get(1).amount)
-//}

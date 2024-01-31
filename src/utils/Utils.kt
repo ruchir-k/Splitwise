@@ -1,5 +1,8 @@
-import models.Group
-import models.User
+package utils
+
+import data.BookKeeper
+import domain.entities.Group
+import domain.entities.User
 import kotlin.math.abs
 import kotlin.math.min
 

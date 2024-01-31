@@ -1,4 +1,4 @@
-package models.expenses
+package domain.entities
 
 import com.sun.jdi.InvalidTypeException
 
@@ -8,6 +8,6 @@ enum class ExpenseType(val asString: String) {
     EXACT("exact")
 }
 
-fun fromString(type: String):ExpenseType {
+fun fromString(type: String): ExpenseType {
     return ExpenseType.values().firstOrNull { it.asString == type} ?: throw InvalidTypeException()
 }

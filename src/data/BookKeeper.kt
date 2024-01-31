@@ -1,28 +1,31 @@
-import exceptions.NoSuchUserException
-import models.Group
-import models.expenses.Expense
-import models.User
-import models.expenses.ExpenseFactory
-import models.expenses.ExpenseType
-import models.splits.Split
+package data
 
-object BookKeeper {
+import exceptions.NoSuchUserException
+import domain.entities.Group
+import domain.entities.Expense
+import domain.entities.User
+import adapter.ExpenseFactory
+import domain.entities.ExpenseType
+import domain.entities.Split
+import domain.repo.ExpenseRepo
+import domain.repo.GroupRepo
+import domain.repo.UserRepo
+
+object BookKeeper: UserRepo, GroupRepo, ExpenseRepo {
     var expenses = mutableMapOf<Long, Expense>()
     var users = mutableMapOf<Long, User>()
     val groups = mutableMapOf<Long, Group>()
     var userByEmail = mutableMapOf<String, User>()
-//    var balances = mutableMapOf<User, MutableMap<User, Double>>()
     var balances = mutableMapOf<Group, MutableMap<User, MutableMap<User, Double>>>()
 
-    fun addUser(user: User) {
+    override fun addUser(user: User) {
         users.put(user.uid, user)
         if(user.email != "") {
             userByEmail.put(user.email, user)
         }
-//        balances.put(user, mutableMapOf())
     }
 
-    fun createGroup(group: Group) {
+    override fun createGroup(group: Group) {
         groups.put(group.uid, group)
         balances.put(group, mutableMapOf())
         group.users.forEach { user: User ->
@@ -30,12 +33,12 @@ object BookKeeper {
         }
     }
 
-    fun addUserToGroup(user: User, group: Group) {
+    override fun addUserToGroup(user: User, group: Group) {
         balances[group]?.put(user, mutableMapOf())
     }
 
-    fun addExpense(name: String, type:ExpenseType, group: Group, createdBy: User, paidBy: User,
-                   splits: MutableList<Split>, totalAmount: Double) {
+    override fun addExpense(name: String, type: ExpenseType, group: Group, createdBy: User, paidBy: User,
+                            splits: MutableList<Split>, totalAmount: Double) {
         val e: Expense = ExpenseFactory.createExpense(type, name, createdBy, totalAmount)
         expenses.put(e.uid, e)
         createdBy.expenses?.add(e)
@@ -59,7 +62,7 @@ object BookKeeper {
 
     }
 
-    fun settleBalance(group: Group, ower: User, owedTo: User) {
+    override fun settleExpense(group: Group, ower: User, owedTo: User) {
         if(!balances[group]?.containsKey(ower)!! || !balances[group]?.get(ower)?.containsKey(owedTo)!!) {
             println("No expense to settle")
             return
@@ -67,7 +70,7 @@ object BookKeeper {
         balances[group]?.get(ower)?.remove(owedTo)
     }
 
-    fun showBalance(group: Group, user: User) {
+    override fun showBalance(group: Group, user: User) {
         var userBalances = balances[group]?.get(user)
         var hadBalance: Boolean = false
 
@@ -88,26 +91,16 @@ object BookKeeper {
         }
     }
 
-    fun showAllBalancesGroup(group: Group) {
+    override fun showAllBalancesGroup(group: Group) {
         for(user1 in balances[group]?.keys!!) {
             showBalance(group, user1)
         }
     }
 
-    fun showAllBalances() {
+    override fun showAllBalances() {
         for (group1 in groups.values) {
             println("Group name: ${group1.name} (Group id: ${group1.uid}) balances:")
             showAllBalancesGroup(group1)
         }
     }
 }
-
-//fun main() {
-//    val u1: User = User("ruchir", "email", "123", "none", "abc")
-//    val u2: User = User("ruchir2", "email2", "123", "none", "abc")
-//    BookKeeper.addUser(u1)
-//    BookKeeper.addUser(u2)
-//
-//    BookKeeper.showAllBalances()
-//
-//}

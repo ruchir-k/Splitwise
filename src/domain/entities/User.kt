@@ -1,6 +1,4 @@
-package models
-
-import models.expenses.Expense
+package domain.entities
 
 data class User (val name: String, val email: String, val hashedPass: String) {
 
@@ -32,8 +30,3 @@ data class User (val name: String, val email: String, val hashedPass: String) {
     }
 
 }
-
-//fun main() {
-//    val u1: User = User("ruchir", "email", "123", "none", "abc")
-//    println(u1)
-//}

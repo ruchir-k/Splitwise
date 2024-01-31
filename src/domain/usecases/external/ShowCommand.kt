@@ -1,14 +1,15 @@
-package commands
+package domain.usecases.external
 
-import BookKeeper
-import Utils
+import data.BookKeeper
+import utils.Utils
 import exceptions.NoSuchGroupException
 import exceptions.NoSuchUserException
-import models.Group
-import models.User
+import domain.entities.Group
+import domain.entities.User
+import domain.repo.Command
 
 class ShowCommand: Command {
-    override fun execute(cmd: List<String>) {
+    override fun invoke(cmd: List<String>) {
         val bk = BookKeeper
         if(cmd.size > 2) {
             val group: Group

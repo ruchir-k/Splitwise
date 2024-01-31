@@ -1,12 +1,13 @@
-package commands
+package domain.usecases.external
 
-import BookKeeper
-import Utils
-import models.Group
-import models.User
+import data.BookKeeper
+import utils.Utils
+import domain.entities.Group
+import domain.entities.User
+import domain.repo.Command
 
 class CreateGroupCommand: Command {
-    override fun execute(cmd: List<String>) {
+    override fun invoke(cmd: List<String>) {
         val bk = BookKeeper
         val name: String = cmd[1]
 

@@ -1,6 +1,4 @@
-package models
-
-import models.expenses.Expense
+package domain.entities
 
 data class Group(val name: String, val users: MutableCollection<User>) {
 

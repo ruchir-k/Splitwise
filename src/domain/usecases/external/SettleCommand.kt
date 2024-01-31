@@ -1,14 +1,15 @@
-package commands
+package domain.usecases.external
 
-import BookKeeper
+import data.BookKeeper
 import exceptions.NoSuchGroupException
 import exceptions.NoSuchUserException
-import jdk.jshell.execution.Util
-import models.Group
-import models.User
+import domain.entities.Group
+import domain.entities.User
+import domain.repo.Command
+import utils.Utils
 
-class SettleCommand:Command {
-    override fun execute(cmd: List<String>) {
+class SettleCommand: Command {
+    override fun invoke(cmd: List<String>) {
         val bk = BookKeeper
         val group: Group
         try {
@@ -32,7 +33,7 @@ class SettleCommand:Command {
             return
         }
 
-        bk.settleBalance(group, ower, owedTo)
+        bk.settleExpense(group, ower, owedTo)
 
     }
 }
