@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="43548b3b-6831-41aa-aaaa-41565eceb367" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/BookKeeperDB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/DatabaseFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/BalancesTable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/GroupTable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/UserTable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/Expense.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/Group.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/Split.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/Command.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Splitwise.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adapter/CommandFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/CommandFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adapter/ExpenseFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ExpenseFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adapter/SplitFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/SplitFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/BookKeeper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/BookKeeper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Expense.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/ExpenseType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/ExpenseType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Group.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/Split.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/entities/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/repo/Command.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/repo/ExpenseRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/ExpenseRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/repo/GroupRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/GroupRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/repo/UserRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/UserRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/external/AddExpenseCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddExpenseCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/external/AddUserCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/external/AddUserToGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserToGroupCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/external/CreateGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/CreateGroupCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/external/SettleCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/SettleCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/external/ShowCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/internal/EqualExpense.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/internal/EqualExpense.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/usecases/internal/EqualSplit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/internal/EqualSplit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/BadCommandFormatException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/BadCommandFormatException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/IllegalSplitException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/IllegalSplitException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/InvalidExpenseTypeException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/InvalidExpenseTypeException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/NoSuchGroupException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/NoSuchGroupException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/NoSuchUserException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/NoSuchUserException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/utils/Utils.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Splitwise" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Splitwise" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Splitwise" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2bIW1SKtyGcW4WzvDJ8KiFyHOos" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build Splitwise.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Splitwise [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Splitwise [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.BookKeeperDBKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.BookKeeperKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.DatabaseFactoryKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.EqualExpenseKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.EqualSplitKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt (1).executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.SetupKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.UserKt.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ruchirkumbhare/IdeaProjects/Splitwise&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/ruchirkumbhare/IdeaProjects/Splitwise/src/abc/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.28045976&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/abc" />
+      <recent name="$PROJECT_DIR$/src/abc/src" />
+      <recent name="$PROJECT_DIR$/src/abc/src/main" />
+      <recent name="$PROJECT_DIR$/src/abc/src/main/kotlin" />
+      <recent name="$PROJECT_DIR$/src/Domain/Entities" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="data.psql" />
+      <recent name="domain.usecases.internal" />
+      <recent name="adapter" />
+      <recent name="utils" />
+      <recent name="Domain.Usecases.External" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.DatabaseFactoryKt">
+    <configuration name="Splitwise [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Splitwise [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BookKeeperDBKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="MONGODB_URI" value="mongodb+srv://ruchir:numb1234@cluster0.gdlxnhl.mongodb.net/?retryWrites=true&amp;w=majority" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="data.BookKeeperDBKt" />
+      <module name="Splitwise" />
+      <shortenClasspath name="NONE" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseFactoryKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data.psql.DatabaseFactoryKt" />
+      <module name="Splitwise.src.abc.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="Splitwise" />
+      <shortenClasspath name="NONE" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="JDBC_DATABASE_URL" value="jdbc:postgresql://localhost:5432/splitwise" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="Splitwise.src.abc.main" />
+      <shortenClasspath name="NONE" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SetupKt" type="JetRunConfigurationType" nameIsGenerated="true">
+      <envs>
+        <env name="MONGODB_URI" value="mongodb+srv://ruchir:numb1234@cluster0.gdlxnhl.mongodb.net/?retryWrites=true&amp;w=majority" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="data.SetupKt" />
+      <module name="Splitwise" />
+      <shortenClasspath name="NONE" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Splitwise [build]" />
+      <item itemvalue="Gradle.Splitwise [clean]" />
+      <item itemvalue="Kotlin.SetupKt" />
+      <item itemvalue="Kotlin.MainKt" />
+      <item itemvalue="Kotlin.DatabaseFactoryKt" />
+      <item itemvalue="Kotlin.BookKeeperDBKt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.DatabaseFactoryKt" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.Splitwise [build]" />
+        <item itemvalue="Gradle.Splitwise [clean]" />
+        <item itemvalue="Kotlin.BookKeeperDBKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43548b3b-6831-41aa-aaaa-41565eceb367" name="Changes" comment="" />
+      <created>1705902859545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705902859545</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.LinkedHashMap$Entry" memberName="value" />
+        <PinnedItemInfo parentTag="BookKeeper" memberName="userByEmail" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
