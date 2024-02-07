@@ -1,85 +1,49 @@
 package domain.usecases.external
 
-import data.BookKeeper
-import utils.Utils
-import exceptions.InvalidExpenseTypeException
 import exceptions.NoSuchGroupException
-import exceptions.NoSuchUserException
-import domain.entities.Group
-import domain.entities.User
-import domain.repo.Command
-import domain.entities.Expense
-import adapter.ExpenseFactory
-import domain.entities.ExpenseType
-import domain.entities.Split
-import adapter.SplitFactory
-import java.util.*
+import domain.repo.ExpenseRepo
+import domain.repo.GroupRepo
 
-class AddExpenseCommand: Command {
-    override suspend fun invoke(cmd: List<String>) {
-        val bk = BookKeeper
-        val exptype: ExpenseType
-        try {
-            exptype = ExpenseType.valueOf(cmd[1].uppercase(Locale.getDefault()))
-        } catch (e: InvalidExpenseTypeException) {
-            println(e.message)
-            return
+
+class AddExpenseCommand
+constructor(
+    private val expenseRepo: ExpenseRepo,
+    private val groupRepo: GroupRepo
+){
+    suspend fun invoke(groupid: Int, payerUserId: Int, totalAmount: Double) {
+        val group = groupRepo.getGroup(groupid)!!
+        val amount = totalAmount / group.users.size
+
+        if(!group.users.contains(payerUserId)) {
+            throw NoSuchGroupException("User:$payerUserId does not exist in Group:$groupid")
         }
 
-        val name: String = cmd[2]
-        val totalAmount: Double = cmd[3]. toDouble()
-
-        val group: Group
-        try {
-            group = Utils.getGroup(cmd[4])
-        } catch (e: NoSuchGroupException) {
-            println(e.message)
-            return
-        }
-
-        val createdBy: User
-        try {
-            createdBy = Utils.getUser(cmd[5])
-            if(!Utils.isUserPresentInGroup(createdBy, group)) {
-                throw NoSuchUserException("user not present in the group id: ${group.id}, group name: ${group.name}")
+        group.users.forEach loop@{ owerUserId->
+            if(payerUserId == owerUserId) {
+                return@loop
             }
-        } catch (e: NoSuchUserException) {
-            println(e.message)
-            return
-        }
 
-        val expense: Expense
-        try {
-            expense = ExpenseFactory.createExpense(exptype, name, createdBy, totalAmount)
-        } catch (e: InvalidExpenseTypeException) {
-            println(e.message)
-            return
-        }
-
-        val paidBy: User
-        try {
-            paidBy = Utils.getUser(cmd[6])
-            if(!Utils.isUserPresentInGroup(createdBy, group)) {
-                throw NoSuchUserException("user not present in the group id: ${group.id}, group name: ${group.name}")
+            if(expenseRepo.isValidExpense(groupid,payerUserId,owerUserId)) {
+                val expense = expenseRepo.getExpense(groupid,payerUserId,owerUserId)
+                expenseRepo.updateExpense(groupid,payerUserId,owerUserId,amount+expense.amount)
             }
-        } catch (e: NoSuchUserException) {
-            println(e.message)
-            return
-        }
-
-        expense.paidBy = paidBy
-
-        val splits = mutableListOf<Split>()
-
-        if(exptype == ExpenseType.EQUAL) {
-            val splitAmount = totalAmount/group.users.size
-            group.users.forEach { user: User ->
-                val split = SplitFactory.createSplit(exptype, user, splitAmount, 0.0)
-                splits.add(split)
+            else if(expenseRepo.isValidExpense(groupid,owerUserId,payerUserId)) {
+                val expense = expenseRepo.getExpense(groupid,owerUserId,payerUserId)
+                val reverseAmount = expense.amount
+                if(reverseAmount == amount) {
+                    expenseRepo.settleExpense(groupid,owerUserId,payerUserId)
+                }
+                else if(reverseAmount > amount) {
+                    expenseRepo.updateExpense(groupid,owerUserId,payerUserId,reverseAmount-amount)
+                }
+                else if(amount > reverseAmount) {
+                    expenseRepo.settleExpense(groupid,owerUserId,payerUserId)
+                    expenseRepo.addExpense(groupid,payerUserId,owerUserId,amount-reverseAmount)
+                }
+            }
+            else {
+                expenseRepo.addExpense(groupid,payerUserId,owerUserId,amount)
             }
         }
-
-        expense.splits = splits
-        bk.addExpense(name,exptype, group, createdBy,paidBy, splits, totalAmount)
     }
 }

@@ -4,7 +4,7 @@ import domain.entities.Group
 import domain.entities.User
 
 interface GroupRepo {
-    suspend fun createGroup(group: Group)
-    suspend fun getGroup(id: String)
-    fun addUserToGroup(user: User, group: Group)
+    suspend fun createGroup(name: String, users: List<Int>): Group
+    suspend fun getGroup(id: Int): Group?
+    suspend fun addUserToGroup(userid: Int, groupid: Int)
 }

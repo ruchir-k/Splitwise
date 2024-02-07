@@ -1,15 +1,14 @@
 package domain.repo
 
-import domain.entities.ExpenseType
-import domain.entities.Group
-import domain.entities.Split
-import domain.entities.User
+import domain.entities.*
 
 interface ExpenseRepo {
-    fun addExpense(name: String, type: ExpenseType, group: Group, createdBy: User, paidBy: User,
-                   splits: MutableList<Split>, totalAmount: Double)
-    fun settleExpense(group: Group, ower: User, owedTo: User)
-    fun showBalance(group: Group, user: User)
-    fun showAllBalancesGroup(group: Group)
-    fun showAllBalances()
+    suspend fun addExpense(groupid: Int, owedToUserId: Int, oweruserid:Int, amount: Double)
+    suspend fun getExpense(groupid: Int, owedToUserId: Int, oweruserid:Int): Expense
+    suspend fun updateExpense(groupid: Int, owedToUserId: Int, oweruserid:Int, amount: Double)
+    suspend fun settleExpense(groupid: Int, owedToUserId: Int, oweruserid:Int)
+    suspend fun isValidExpense(groupid: Int, owedToUserId: Int, oweruserid:Int): Boolean
+    suspend fun getBalanceByGroupUser(groupid: Int, userid: Int): List<Expense>
+    suspend fun getBalanceByGroup(groupid: Int): List<Expense>
+    suspend fun getAllBalances(): List<Expense>
 }

@@ -35,7 +35,7 @@ object DatabaseFactory {
         return HikariDataSource(config)
     }
 
-    suspend fun <T> dbInsertQuery(block: () -> T): Unit =
+    suspend fun <T> dbQuery(block: () -> T): T =
         withContext(Dispatchers.IO) {
             transaction {
                 block()
@@ -43,6 +43,14 @@ object DatabaseFactory {
         }
 }
 
-fun main() {
-    val db = DatabaseFactory
+suspend fun main() {
+//    val db = DatabaseFactory
+//    bk.addUser("ruchir", "abc@zee.com")
+//    val user1 = bk.getUser(1)
+//    println(user1)
+//    bk.createGroup("g1", listOf(1,2))
+//    val g1 = bk.getGroup(1)
+//    println(g1)
+//    bk.addExpense(1,2,1, 100.0)
+
 }
