@@ -1,8 +1,10 @@
 package domain.usecases.external
 
 import domain.repo.GroupRepo
+import javax.inject.Inject
 
 class CreateGroupCommand
+@Inject
 constructor(
     private val groupRepo: GroupRepo
 ){

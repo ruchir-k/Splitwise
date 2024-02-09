@@ -1,8 +1,10 @@
 package adapter
 
 import domain.usecases.external.ShowBalanceByGroupCommand
+import javax.inject.Inject
 
 class ShowBalanceByGroupService
+@Inject
 constructor(
     private val showBalanceByGroupCommand: ShowBalanceByGroupCommand
 ): Service{

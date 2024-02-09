@@ -5,8 +5,11 @@ import domain.entities.Group
 import exceptions.NoSuchGroupException
 import kotlinx.serialization.json.Json
 import org.jetbrains.exposed.sql.ResultRow
+import javax.inject.Inject
 
-class GroupMapper {
+class GroupMapper
+@Inject
+constructor(){
     fun map(row: ResultRow?): Group? {
         if(row == null) {
             throw NoSuchGroupException("error in mapper")

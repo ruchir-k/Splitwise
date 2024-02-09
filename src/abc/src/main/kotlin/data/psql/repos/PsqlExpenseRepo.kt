@@ -7,8 +7,10 @@ import domain.entities.Expense
 import domain.repo.ExpenseRepo
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
+import javax.inject.Inject
 
 class PsqlExpenseRepo
+@Inject
 constructor(
     val db: DatabaseFactory,
     val expenseMapper: ExpenseMapper

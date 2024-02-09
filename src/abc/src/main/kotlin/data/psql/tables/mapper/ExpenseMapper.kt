@@ -4,8 +4,11 @@ import data.psql.tables.BalancesTable
 import domain.entities.Expense
 import exceptions.NoSuchExpenseException
 import org.jetbrains.exposed.sql.ResultRow
+import javax.inject.Inject
 
-class ExpenseMapper {
+class ExpenseMapper
+@Inject
+constructor(){
     fun map(row: ResultRow?): Expense? {
         if(row == null) {
             throw NoSuchExpenseException("error in mapper")

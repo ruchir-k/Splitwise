@@ -1,8 +1,10 @@
 package adapter
 
 import domain.usecases.external.AddExpenseCommand
+import javax.inject.Inject
 
 class AddExpenseService
+@Inject
 constructor(
     private val addExpenseCommand: AddExpenseCommand
 ): Service{

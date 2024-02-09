@@ -2,8 +2,10 @@ package domain.usecases.external
 
 import domain.repo.ExpenseRepo
 import domain.repo.UserRepo
+import javax.inject.Inject
 
 class ShowBalanceByGroupUserCommand
+@Inject
 constructor(
     private val expenseRepo: ExpenseRepo,
     private val userRepo: UserRepo

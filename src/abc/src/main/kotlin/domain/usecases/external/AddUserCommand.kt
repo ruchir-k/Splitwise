@@ -1,8 +1,10 @@
 package domain.usecases.external
 
 import domain.repo.UserRepo
+import javax.inject.Inject
 
 class AddUserCommand
+@Inject
 constructor(
     private val userRepo: UserRepo
 ){

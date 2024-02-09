@@ -9,8 +9,10 @@ import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.statements.InsertStatement
+import javax.inject.Inject
 
 class PsqlUserRepo
+@Inject
 constructor(
     val db: DatabaseFactory,
     val userMapper: UserMapper

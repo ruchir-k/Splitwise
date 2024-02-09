@@ -1,8 +1,10 @@
 package adapter
 
 import domain.usecases.external.CreateGroupCommand
+import javax.inject.Inject
 
 class CreateGroupService
+@Inject
 constructor(
     private val createGroupCommand: CreateGroupCommand
 ): Service{

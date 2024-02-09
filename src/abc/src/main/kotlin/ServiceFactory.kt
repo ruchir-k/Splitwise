@@ -8,35 +8,21 @@ import data.psql.tables.mapper.GroupMapper
 import data.psql.tables.mapper.UserMapper
 import domain.usecases.external.*
 import exceptions.BadCommandFormatException
+import javax.inject.Inject
 
-object ServiceFactory
-//constructor(
-//    private val addUserCommand: AddUserCommand,
-//    private val addUserToGroupCommand: AddUserToGroupCommand,
-//    private val createGroupCommand: CreateGroupCommand,
-//    private val addExpenseCommand: AddExpenseCommand,
-//    private val showBalanceByGroupCommand: ShowBalanceByGroupCommand,
-//    private val showBalanceByGroupUserCommand: ShowBalanceByGroupUserCommand,
-//    private val settleBalanceCommand: SettleBalanceCommand
-//    )
+class ServiceFactory
+@Inject
+constructor(
+    private val addUserCommand: AddUserCommand,
+    private val addUserToGroupCommand: AddUserToGroupCommand,
+    private val createGroupCommand: CreateGroupCommand,
+    private val addExpenseCommand: AddExpenseCommand,
+    private val showBalanceByGroupCommand: ShowBalanceByGroupCommand,
+    private val showBalanceByGroupUserCommand: ShowBalanceByGroupUserCommand,
+    private val settleBalanceCommand: SettleBalanceCommand
+    )
 {
-    val db = DatabaseFactory
 
-    val userMapper = UserMapper()
-    val groupMapper = GroupMapper()
-    val expenseMapper = ExpenseMapper()
-
-    val userRepo = PsqlUserRepo(db, userMapper)
-    val groupRepo = PsqlGroupRepo(db, groupMapper)
-    val expenseRepo = PsqlExpenseRepo(db, expenseMapper)
-
-    val addUserCommand =  AddUserCommand(userRepo)
-    val addUserToGroupCommand = AddUserToGroupCommand(groupRepo)
-    val createGroupCommand = CreateGroupCommand(groupRepo)
-    val addExpenseCommand = AddExpenseCommand(expenseRepo, groupRepo)
-    val showBalanceByGroupCommand = ShowBalanceByGroupCommand(expenseRepo, userRepo)
-    val showBalanceByGroupUserCommand = ShowBalanceByGroupUserCommand(expenseRepo, userRepo)
-    val settleBalanceCommand = SettleBalanceCommand(expenseRepo)
 
     val serviceMap = mutableMapOf<String, Service>().apply {
         put("add_user", AddUserService(addUserCommand))

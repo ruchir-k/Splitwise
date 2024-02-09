@@ -2,8 +2,10 @@ package domain.usecases.external
 
 import domain.repo.ExpenseRepo
 import exceptions.NoSuchExpenseException
+import javax.inject.Inject
 
 class SettleBalanceCommand
+@Inject
 constructor(
     private val expenseRepo: ExpenseRepo
 ){

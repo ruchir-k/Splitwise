@@ -1,8 +1,10 @@
 package adapter
 
 import domain.usecases.external.SettleBalanceCommand
+import javax.inject.Inject
 
 class SettleBalanceService
+@Inject
 constructor(
     private val settleBalanceCommand: SettleBalanceCommand
 ): Service{

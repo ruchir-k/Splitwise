@@ -10,8 +10,11 @@ import kotlinx.coroutines.withContext
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
+import javax.inject.Inject
 
-object DatabaseFactory {
+class DatabaseFactory
+@Inject
+constructor(){
     init {
         val dataSource = hikari()
         Database.connect(dataSource)
@@ -41,16 +44,4 @@ object DatabaseFactory {
                 block()
             }
         }
-}
-
-suspend fun main() {
-//    val db = DatabaseFactory
-//    bk.addUser("ruchir", "abc@zee.com")
-//    val user1 = bk.getUser(1)
-//    println(user1)
-//    bk.createGroup("g1", listOf(1,2))
-//    val g1 = bk.getGroup(1)
-//    println(g1)
-//    bk.addExpense(1,2,1, 100.0)
-
 }

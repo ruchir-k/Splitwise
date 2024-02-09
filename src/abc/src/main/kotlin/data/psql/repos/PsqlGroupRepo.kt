@@ -12,8 +12,10 @@ import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.statements.InsertStatement
 import org.jetbrains.exposed.sql.update
+import javax.inject.Inject
 
 class PsqlGroupRepo
+@Inject
 constructor(
     val db: DatabaseFactory,
     val groupMapper: GroupMapper

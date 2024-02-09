@@ -3,9 +3,11 @@ package domain.usecases.external
 import exceptions.NoSuchGroupException
 import domain.repo.ExpenseRepo
 import domain.repo.GroupRepo
+import javax.inject.Inject
 
 
 class AddExpenseCommand
+@Inject
 constructor(
     private val expenseRepo: ExpenseRepo,
     private val groupRepo: GroupRepo
