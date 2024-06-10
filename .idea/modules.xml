@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Splitwise.iml" filepath="$PROJECT_DIR$/.idea/modules/Splitwise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/splitwise/Splitwise.core.splitwise.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/splitwise/Splitwise.core.splitwise.main.iml" />
     </modules>
   </component>
 </project>

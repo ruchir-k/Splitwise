@@ -5,38 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43548b3b-6831-41aa-aaaa-41565eceb367" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/RootComponent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/di/components/SplitwiseComponent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/di/modules/PsqlModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/ServiceFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/ServiceFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddExpenseService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddExpenseService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddUserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddUserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddUserToGroupService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddUserToGroupService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/CreateGroupService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/CreateGroupService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/SettleBalanceService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/SettleBalanceService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ShowBalanceByGroupService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ShowBalanceByGroupService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ShowBalanceByGroupUserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ShowBalanceByGroupUserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/BookKeeper.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/DatabaseFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/DatabaseFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlExpenseRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlExpenseRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlGroupRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlGroupRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlUserRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlUserRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/ExpenseMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/ExpenseMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/GroupMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/GroupMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/UserMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/UserMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/ExpenseType.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddExpenseCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddExpenseCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserToGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserToGroupCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/CreateGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/CreateGroupCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/SettleBalanceCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/SettleBalanceCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupUserCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupUserCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/RootComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/RootComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/ServiceFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/ServiceFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddExpenseService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/AddExpenseService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddUserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/AddUserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/AddUserToGroupService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/AddUserToGroupService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/CreateGroupService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/CreateGroupService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/Service.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/Service.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/SettleBalanceService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/SettleBalanceService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ShowBalanceByGroupService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/ShowBalanceByGroupService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/adapter/ShowBalanceByGroupUserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/adapter/ShowBalanceByGroupUserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/DatabaseFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/DatabaseFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlExpenseRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/repos/PsqlExpenseRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlGroupRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/repos/PsqlGroupRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/repos/PsqlUserRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/repos/PsqlUserRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/BalancesTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/tables/BalancesTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/GroupTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/tables/GroupTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/UserTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/tables/UserTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/ExpenseMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/tables/mapper/ExpenseMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/GroupMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/tables/mapper/GroupMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/data/psql/tables/mapper/UserMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/data/psql/tables/mapper/UserMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/di/components/SplitwiseComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/di/components/SplitwiseComponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/di/modules/PsqlModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/di/modules/PsqlModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/Expense.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/entities/Expense.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/Group.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/entities/Group.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/entities/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/entities/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/ExpenseRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/repo/ExpenseRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/GroupRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/repo/GroupRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/repo/UserRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/repo/UserRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddExpenseCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/AddExpenseCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/AddUserCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/AddUserToGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/AddUserToGroupCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/CreateGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/CreateGroupCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/SettleBalanceCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/SettleBalanceCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupUserCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/domain/usecases/external/ShowBalanceByGroupUserCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/BadCommandFormatException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/exceptions/BadCommandFormatException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/IllegalSplitException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/exceptions/IllegalSplitException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/InvalidExpenseTypeException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/exceptions/InvalidExpenseTypeException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/NoSuchExpenseException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/exceptions/NoSuchExpenseException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/NoSuchGroupException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/exceptions/NoSuchGroupException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/kotlin/exceptions/NoSuchUserException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/kotlin/exceptions/NoSuchUserException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abc/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/splitwise/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,17 +77,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Splitwise" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Splitwise" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Splitwise" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -101,42 +107,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build Splitwise.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Splitwise [assemble].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Splitwise [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Splitwise [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.AddUserServiceKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.BookKeeperDBKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.BookKeeperKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.DatabaseFactoryKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.EqualExpenseKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.EqualSplitKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt (1).executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.SetupKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.UserKt.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;di&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ruchirkumbhare/IdeaProjects/Splitwise&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/ruchirkumbhare/IdeaProjects/Splitwise/src/abc/src/main/kotlin/Main.kt&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.28045976&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build Splitwise.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.Splitwise [assemble].executor": "Run",
+    "Gradle.Splitwise [build].executor": "Run",
+    "Gradle.Splitwise [clean].executor": "Run",
+    "Kotlin.AddUserServiceKt.executor": "Run",
+    "Kotlin.BookKeeperDBKt.executor": "Run",
+    "Kotlin.BookKeeperKt.executor": "Run",
+    "Kotlin.DatabaseFactoryKt.executor": "Run",
+    "Kotlin.EqualExpenseKt.executor": "Run",
+    "Kotlin.EqualSplitKt.executor": "Run",
+    "Kotlin.MainKt (1).executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "Kotlin.SetupKt.executor": "Run",
+    "Kotlin.UserKt.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "11",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ruchirkumbhare/IdeaProjects/Splitwise",
+    "onboarding.tips.debug.path": "/Users/ruchirkumbhare/IdeaProjects/Splitwise/src/abc/src/main/kotlin/Main.kt",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28045976",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  },
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "/home/ruchir/.gradle"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/abc" />
